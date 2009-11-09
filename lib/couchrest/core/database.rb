@@ -306,5 +306,9 @@ module CouchRest
     def base64(data)
       Base64.encode64(data).gsub(/\s/,'')
     end
+
+    include CouchRest::Mixins::Batch
+    include CouchRest::Mixins::DesignFiles
+    include CouchRest::Mixins::Finders
   end
 end
